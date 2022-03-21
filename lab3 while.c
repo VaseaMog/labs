@@ -1,24 +1,24 @@
 #include <stdio.h>
 #include <math.h>
-int main() 
+int main()
 {
-	double x;
-	double y;
-	printf("Enter x 0 <= x <= 2\n");
-	scanf("%lf", &x);
+	double y, h;
+	printf("Enter h -> ");
+	scanf("%lf", &h);
 	printf("x       f(x)\n------------\n");
-	while (x >= 0 && x <= 2)
+	double x = 0.00;
+	while (x <= 2.0)
 	{
-		if (x >= 0 && x < 1)
+		if (x < 1.0)
 		{
 			y = x * x * atan(x);
-			printf("%2.1lf     %2.1lf\n", x, y);
+			printf("%3.2lf     %3.2lf\n", x, y);
 		}
-		if (x > 1 && x <= 2)
+		else if (x > 1.0)
 		{
-			y = sin((1 / (x * x)));
-			printf("%2.1lf     %2.1lf\n", x, y);
+			y = sin((1.0 / (x * x)));
+			printf("%3.2lf     %3.2lf\n", x, y);
 		}
-		x = x - 0.1;
+	x = x + h;
 	}
 }
