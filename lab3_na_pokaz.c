@@ -8,9 +8,9 @@ int main()
     double x = 0;
     printf("Enter h -> ");
     scanf("%lf", &h);
-    b = 2 / h;
+    b = 4 / h;
     printf("x       f(x)\n------------\n");
-    while (b > h)
+    while (b >= h)
     {
         if (0 <= x && x <= 1)
         {
@@ -37,9 +37,9 @@ int main()
     double y, h;
     printf("Enter h -> ");
     scanf("%lf", &h);
-    b = 2 / h;
+    b = 4 / h;
     printf("x       f(x)\n------------\n");
-    for (double x = 0; b > h; x += h, b--)
+    for (double x = 0; b >= h; x += h, b--)
     {
         if (0 <= x && x <= 1)
         {
